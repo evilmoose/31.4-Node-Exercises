@@ -1,8 +1,8 @@
 const fs = require('fs');
 const process = require('process');
 
-const cat = (path) => {
-  fs.readFile(path, 'utf8', (err, data) => {
+function cat(path) {
+  fs.readFile(path, 'utf8', function(err, data) {
     if (err) {
       console.error(`Error reading ${path}: ${err}`);
       process.exit(1);
